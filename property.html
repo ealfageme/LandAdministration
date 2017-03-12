@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Clean Blog - About</title>
+    <title>Land Administrator</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -42,23 +42,20 @@
                     <span class="sr-only">Toggle navigation</span>
                     Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand" href="index.html">Start Bootstrap</a>
+                <a class="navbar-brand" href="home.html">Home</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="index.html">Home</a>
+                        <a href="owner.html">Owner</a>
                     </li>
                     <li>
-                        <a href="about.html">About</a>
+                        <a href="property.html">Property</a>
                     </li>
                     <li>
-                        <a href="post.html">Sample Post</a>
-                    </li>
-                    <li>
-                        <a href="contact.html">Contact</a>
+                        <a href="community.html">Community</a>
                     </li>
                 </ul>
             </div>
@@ -69,30 +66,92 @@
 
     <!-- Page Header -->
     <!-- Set your background image for this header on the line below. -->
-    <header class="intro-header" style="background-image: url('img/about-bg.jpg')">
+    <header class="intro-header" style="background-image: url('img/contact-bg.jpg')">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="page-heading">
-                        <h1>About Me</h1>
+                        <h1>Property</h1>
+
                         <hr class="small">
-                        <span class="subheading">This is what I do.</span>
+                        <span class="subheading">Add, Modify, Query</span>
                     </div>
                 </div>
             </div>
         </div>
     </header>
-
-    <!-- Main Content -->
-    <div class="container">
+    <!-- Post Content -->
+     <div class="container">
         <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe nostrum ullam eveniet pariatur voluptates odit, fuga atque ea nobis sit soluta odio, adipisci quas excepturi maxime quae totam ducimus consectetur?</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius praesentium recusandae illo eaque architecto error, repellendus iusto reprehenderit, doloribus, minus sunt. Numquam at quae voluptatum in officia voluptas voluptatibus, minus!</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum molestiae debitis nobis, quod sapiente qui voluptatum, placeat magni repudiandae accusantium fugit quas labore non rerum possimus, corrupti enim modi! Et.</p>
-            </div>
+           <h2>Add new Property</h2>
+            <div class="col-l-12 col-md-12 col-sm-12 col-xs-12" >
+             <form>
+                 <div class="form-group" >
+                      <div class="col-l-3 col-md-3 col-sm-3 col-xs-12 col-md-offset-2">
+                          <label>Portal number</label>
+                          <input type='name' name ='portalnumber'>
+                          <label>Floor</label>
+                          <input type='name'name ='floor'>
+                          <label>Letter</label>
+                          <input type='name'name ='letter'>
+                     </div>
+                      <div class="col-l-3 col-md-3 col-sm-3 col-xs-12" >
+                          <label>Owner</label>
+                          <select class="form-control" id="exampleSelect1">
+                              <option>John Snow</option>
+                              <option>John Cena</option>
+                              <option>John Travolta</option>
+                              <option>John Wick</option>
+                              <option>John Wayle</option>
+                        </select>
+                        <label>Community</label>
+                          <select class="form-control" id="exampleSelect1">
+                              <option>community1</option>
+                              <option>community1</option>
+                              <option>community1</option>
+                              <option>community1</option>
+                              <option>community1</option>
+                        </select>
+                     </div>
+
+
+                     <div class="col-l-2 col-md-2 col-sm-2 col-xs-12" >
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                          <button type="input" class="btn btn-primary">Add property</button>
+                     </div>
+                 </div>
+
+
+            </form>
+         </div>
         </div>
+         <br>
+         <h2>Properties</h2>
+         <div class="form-group">
+             <form>
+
+            <select multiple class="form-control" id="Select2">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+             </select>
+             <br>
+             <div class="col-l-1 col-md-12 col-sm-12 col-xs-12 col-md-offset-5" >
+              <button type="input" class="btn btn-primary">modify property</button>
+             </div>
+             </form>
+
+         </div
     </div>
+
+
 
     <hr>
 

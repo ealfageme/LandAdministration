@@ -1,33 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="description" content=""/>
+    <meta name="author" content=""/>
 
     <title>Land Administrator</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
 
     <!-- Theme CSS -->
-    <link href="/css/clean-blog.min.css" rel="stylesheet">
+    <link href="/css/clean-blog.min.css" rel="stylesheet"/>
 
     <!-- Custom Fonts -->
-    <link href="/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href="/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'/>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'/>
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
 
 </head>
 
@@ -42,20 +36,20 @@
                     <span class="sr-only">Toggle navigation</span>
                     Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand" href="home.html">Home</a>
+                <a class="navbar-brand" href="/home/">Home</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="owner.html">Owner</a>
+                        <a href="/owner/">Owner</a>
                     </li>
                     <li>
-                        <a href="property.html">Property</a>
+                        <a href="/property/">Property</a>
                     </li>
                     <li>
-                        <a href="community.html">Community</a>
+                        <a href="/community/">Community</a>
                     </li>
 
                 </ul>
@@ -74,7 +68,7 @@
                     <div class="page-heading">
                         <h1>Owner</h1>
 
-                        <hr class="small">
+                        <hr class="small"/>
                         <span class="subheading">Modify this owner</span>
                     </div>
                 </div>
@@ -90,29 +84,29 @@
                  <div class="form-group" >
                       <div class="col-l-3 col-md-3 col-sm-3 col-xs-12" >
                           <label>Name</label>
-                          <input type='name' name ='ownername' value ='John'>
+                          <input  name ='ownername' value ='John'/>
                           <label>Surname</label>
-                          <input type='name'name ='ownersurname' value ='Snow'>
+                          <input name ='ownersurname' value ='Snow'/>
                           <label>DNI</label>
-                          <input type='name' name ='ownername'value ='4582357A'>
+                          <input  name='ownername' value ='4582357A'/>
                      </div>
                        <div class="col-l-3 col-md-3 col-sm-3 col-xs-12" >
                            <label>Phone</label>
-                           <input type='name'name ='ownerphone'value ='665458526'>
+                           <input name ='ownerphone' value ='665458526'/>
                            <label>Percentaje</label>
-                           <input type='name'name ='ownerperc'value ='35%'>
+                           <input name ='ownerperc' value ='35%'/>
                            <label>Bank Accout</label>
-                           <input type='name'name ='owneraccount'value ='96745-4584845-54'>
+                           <input name ='owneraccount' value ='96745-4584845-54'/>
                         </div>
 
                      <div class="col-l-3 col-md-3 col-sm-3 col-xs-12" >
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                           <button type="input" class="btn btn-primary">Modify</button>
+                            <br></br>
+                            <br></br>
+                            <br></br>
+                            <br></br>
+                            <br></br>
+                            <br></br>
+                           <button type="submit" class="btn btn-primary">Modify</button>
                      </div>
                  </div>
 
@@ -120,12 +114,9 @@
             </form>
          </div>
         </div>
-         <br>
+         <br></br>
 
     </div>
-
-
-    <hr>
 
     <!-- Footer -->
     <footer>

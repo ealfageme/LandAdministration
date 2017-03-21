@@ -1,5 +1,6 @@
-package Entities;
+package com.example.Entities;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.Entity;
@@ -20,9 +21,9 @@ public class Community {
 	private int population;
 	private int bankCount;
 	@OneToMany(mappedBy="community")
-	private List<Property> communityproperties;
+	private List<Property> communityproperties=new ArrayList<>();
 	
-	
+	public Community(){}
 	
 	public Community(String cif, String street, int number, int postalCode, int population, int bankCount) {
 		super();

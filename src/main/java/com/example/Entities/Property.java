@@ -1,4 +1,4 @@
-package Entities;
+package com.example.Entities;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -20,7 +20,7 @@ public class Property {
 	@ManyToOne
 	private Community community;
 	
-	
+	public Property() {}
 	public Property(int number, int floor, char letter, double propertyPercent) {
 		super();
 		this.number = number;

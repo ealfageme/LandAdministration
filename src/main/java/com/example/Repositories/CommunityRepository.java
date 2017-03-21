@@ -1,8 +1,8 @@
-package Repositories;
+package com.example.Repositories;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import Entities.Community;
+import com.example.Entities.Community;
 
 
 

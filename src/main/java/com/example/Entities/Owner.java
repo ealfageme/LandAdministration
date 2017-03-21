@@ -1,5 +1,6 @@
-package Entities;
+package com.example.Entities;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.Entity;
@@ -18,9 +19,9 @@ public class Owner {
 	private String surname;
 	private long numberPhone;
 	@OneToMany(mappedBy="owner")
-	private List<Property> ownerProperties;
+	private List<Property> ownerProperties=new ArrayList<>();
 	
-	
+	public Owner(){}
 	
 	public Owner(String dni, String name, String surname, long numberPhone) {
 		super();

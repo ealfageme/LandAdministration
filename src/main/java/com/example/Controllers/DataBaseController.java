@@ -1,4 +1,4 @@
-package Controllers;
+package com.example.Controllers;
 
 import javax.annotation.PostConstruct;
 
@@ -6,12 +6,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Controller;
 
-import Entities.Community;
-import Entities.Owner;
-import Entities.Property;
-import Repositories.CommunityRepository;
-import Repositories.OwnerRepository;
-import Repositories.PropertyRepository;
+import com.example.Entities.Community;
+import com.example.Entities.Owner;
+import com.example.Entities.Property;
+import com.example.Repositories.CommunityRepository;
+import com.example.Repositories.OwnerRepository;
+import com.example.Repositories.PropertyRepository;
 
 
 

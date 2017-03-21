@@ -12,13 +12,13 @@
     <title>Land Administrator</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Theme CSS -->
-    <link href="css/clean-blog.min.css" rel="stylesheet">
+    <link href="/css/clean-blog.min.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 
@@ -67,43 +67,47 @@
 
     <!-- Page Header -->
     <!-- Set your background image for this header on the line below. -->
-      <header class="intro-header" style="background-image: url('img/contact-bg.jpg')">
+    <header class="intro-header" style="background-image: url('/img/community.jpg')">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="page-heading">
-                        <h1>Owner</h1>
-
+                        <h1>Community</h1>
                         <hr class="small">
-                        <span class="subheading">Modify this owner</span>
+                        <span class="subheading">Add, Modify, Query</span>
                     </div>
                 </div>
             </div>
         </div>
     </header>
-    <!-- Post Content -->
+
+    <!-- Main Content -->
      <div class="container">
         <div class="row">
-           <h2>Jonh Snow</h2>
+           <h2>Add new community</h2>
             <div class="col-l-12 col-md-12 col-sm-12 col-xs-12 col-md-offset-2" >
              <form>
                  <div class="form-group" >
                       <div class="col-l-3 col-md-3 col-sm-3 col-xs-12" >
-                          <label>Name</label>
-                          <input type='name' name ='ownername' value ='John'>
-                          <label>Surname</label>
-                          <input type='name'name ='ownersurname' value ='Snow'>
-                          <label>DNI</label>
-                          <input type='name' name ='ownername'value ='4582357A'>
+                          <label>CIF</label>
+                          <input type='name' name ='cif'>
+                          <label>Street</label>
+                          <input type='name'name ='street'>
+                          <label>Number</label>
+                          <input type='name'name ='numercommunity'>
+
+
                      </div>
-                       <div class="col-l-3 col-md-3 col-sm-3 col-xs-12" >
-                           <label>Phone</label>
-                           <input type='name'name ='ownerphone'value ='665458526'>
-                           <label>Percentaje</label>
-                           <input type='name'name ='ownerperc'value ='35%'>
-                           <label>Bank Accout</label>
-                           <input type='name'name ='owneraccount'value ='96745-4584845-54'>
-                        </div>
+                      <div class="col-l-3 col-md-3 col-sm-3 col-xs-12" >
+                           <label>Postal Code</label>
+                          <input type='name' name ='postalcode'>
+                          <label>Population</label>
+                          <input type='name'name ='population'>
+                          <label>Bank account</label>
+                          <input type='name'name ='bankaccountco'>
+
+                     </div>
+
 
                      <div class="col-l-3 col-md-3 col-sm-3 col-xs-12" >
                             <br>
@@ -112,7 +116,7 @@
                             <br>
                             <br>
                             <br>
-                           <button type="input" class="btn btn-primary">Modify</button>
+                            <button type="input" class="btn btn-primary">Add community</button>
                      </div>
                  </div>
 
@@ -121,6 +125,24 @@
          </div>
         </div>
          <br>
+         <h2>Communities</h2>
+          <div class="form-group">
+             <form>
+             <div id='selectowner' >
+            <select multiple class="form-control" id="Select2">
+                <option>community 1</option>
+                <option>community 2</option>
+                <option>community 3</option>
+                <option>community 4</option>
+                <option>community 5</option>
+             </select></div>
+             <br>
+             <div class="col-l-1 col-md-12 col-sm-12 col-xs-12 col-md-offset-5" >
+              <button type="input" class="btn btn-primary"><a href='communityPage.html'> modify community</a></button>
+             </div>
+             </form>
+
+         </div>
 
     </div>
 
@@ -165,17 +187,17 @@
     </footer>
 
     <!-- jQuery -->
-    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="/vendor/jquery/jquery.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
 
     <!-- Contact Form JavaScript -->
-    <script src="js/jqBootstrapValidation.js"></script>
-    <script src="js/contact_me.js"></script>
+    <script src="/js/jqBootstrapValidation.js"></script>
+    <script src="/js/contact_me.js"></script>
 
     <!-- Theme JavaScript -->
-    <script src="js/clean-blog.min.js"></script>
+    <script src="/js/clean-blog.min.js"></script>
 
 </body>
 

@@ -12,13 +12,13 @@
     <title>Land Administrator</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Theme CSS -->
-    <link href="css/clean-blog.min.css" rel="stylesheet">
+    <link href="/css/clean-blog.min.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 
@@ -57,7 +57,6 @@
                     <li>
                         <a href="community.html">Community</a>
                     </li>
-
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -67,12 +66,12 @@
 
     <!-- Page Header -->
     <!-- Set your background image for this header on the line below. -->
-      <header class="intro-header" style="background-image: url('img/owner.jpg')">
+    <header class="intro-header" style="background-image: url('/img/property.jpg')">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="page-heading">
-                        <h1>Owner</h1>
+                        <h1>Property</h1>
 
                         <hr class="small">
                         <span class="subheading">Add, Modify, Query</span>
@@ -84,35 +83,46 @@
     <!-- Post Content -->
      <div class="container">
         <div class="row">
-           <h2>Add new Owner</h2>
-            <div class="col-l-12 col-md-12 col-sm-12 col-xs-12 col-md-offset-2" >
+           <h2>Add new Property</h2>
+            <div class="col-l-12 col-md-12 col-sm-12 col-xs-12" >
              <form>
                  <div class="form-group" >
-                      <div class="col-l-3 col-md-3 col-sm-3 col-xs-12" >
-                          <label>Name</label>
-                          <input type='name' name ='ownername'>
-                          <label>Surname</label>
-                          <input type='name'name ='ownersurname'>
-                          <label>DNI</label>
-                          <input type='name'name ='ownername'>
+                      <div class="col-l-3 col-md-3 col-sm-3 col-xs-12 col-md-offset-2">
+                          <label>Portal number</label>
+                          <input type='name' name ='portalnumber'>
+                          <label>Floor</label>
+                          <input type='name'name ='floor'>
+                          <label>Letter</label>
+                          <input type='name'name ='letter'>
                      </div>
-                       <div class="col-l-3 col-md-3 col-sm-3 col-xs-12" >
-                           <label>Phone</label>
-                           <input type='name'name ='ownerphone'>
-                           <label>Percentaje</label>
-                           <input type='name'name ='ownerperc'>
-                           <label>Bank Accout</label>
-                           <input type='name'name ='owneraccount'>
-                        </div>
+                      <div class="col-l-3 col-md-3 col-sm-3 col-xs-12" >
+                          <label>Owner</label>
+                          <select class="form-control" id="exampleSelect1">
+                              <option>John Snow</option>
+                              <option>John Cena</option>
+                              <option>John Travolta</option>
+                              <option>John Wick</option>
+                              <option>John Wayle</option>
+                        </select>
+                        <label>Community</label>
+                          <select class="form-control" id="exampleSelect1">
+                              <option>community1</option>
+                              <option>community1</option>
+                              <option>community1</option>
+                              <option>community1</option>
+                              <option>community1</option>
+                        </select>
+                     </div>
 
-                     <div class="col-l-3 col-md-3 col-sm-3 col-xs-12" >
+
+                     <div class="col-l-2 col-md-2 col-sm-2 col-xs-12" >
                             <br>
                             <br>
                             <br>
                             <br>
                             <br>
                             <br>
-                           <button type="input" class="btn btn-primary">Add owner</button>
+                          <button type="input" class="btn btn-primary">Add property</button>
                      </div>
                  </div>
 
@@ -121,25 +131,26 @@
          </div>
         </div>
          <br>
-         <h2>Owners</h2>
+         <h2>Properties</h2>
          <div class="form-group">
              <form>
-             <div >
+
             <select multiple class="form-control" id="Select2">
-                <option>john Snow</option>
+                <option>1</option>
                 <option>2</option>
                 <option>3</option>
                 <option>4</option>
                 <option>5</option>
-             </select></div>
+             </select>
              <br>
              <div class="col-l-1 col-md-12 col-sm-12 col-xs-12 col-md-offset-5" >
-                 <button type="input" class="btn btn-primary"><a href='ownerPage.html'>modify owner</a></button>
+                 <button type="input" class="btn btn-primary"><a href='propertyPage.html'>modify property</a></button>
              </div>
              </form>
 
-         </div>
+         </div
     </div>
+
 
 
     <hr>
@@ -182,17 +193,17 @@
     </footer>
 
     <!-- jQuery -->
-    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="/vendor/jquery/jquery.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
 
     <!-- Contact Form JavaScript -->
-    <script src="js/jqBootstrapValidation.js"></script>
-    <script src="js/contact_me.js"></script>
+    <script src="/js/jqBootstrapValidation.js"></script>
+    <script src="/js/contact_me.js"></script>
 
     <!-- Theme JavaScript -->
-    <script src="js/clean-blog.min.js"></script>
+    <script src="/js/clean-blog.min.js"></script>
 
 </body>
 

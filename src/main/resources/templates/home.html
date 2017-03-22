@@ -81,22 +81,22 @@
 		<div class="row">
 			<form method="post">
 				<span>Select Community</span> 
-				<select class="form-control" style="max-width: 30%; margin: 20px;" id="Select2" name='cif' >
+				<select class="form-control" style="max-width: 40%; margin: 20px;border-radius: 0px !important; -webkit-appearance: none;" id="Select2" name='cif' >
 					<option th:each="community: ${communities}" th:value="${community.cif}" th:text="${community.cif}"></option>
 				</select>
 				 <span>Select Search Option</span> <select class="form-control"
-					style="max-width: 30%; margin: 20px;" id="Select1"
+					style="max-width: 40%; margin: 20px;border-radius: 0px !important; -webkit-appearance: none;" id="Select1"
 					name='optionSelected'>
 					<option value="portalNumber">Portal number</option>
 					<option value="portalNumberFloor">Portal number and floor</option>
 					<option value="surname">Surname</option>
 					<option value="DNI">DNI</option>
 					<option value="wholeCommunity">Whole community</option>
-				</select> <span id="text1" style="margin: 20px;"></span> <input
-					style="margin: 20px;" type="text" id="option1" /> <span id="text2"
-					style="margin: 20px;"></span> <input style="margin: 20px;"
-					type="text" id="option2" />
-				<button>Search</button>
+				</select> <span id="text1" ></span> 
+				<input style="margin: 30px;" type="text" id="option1" /> 
+				<span id="text2" style="margin: 30px;"></span> 
+				<input style="margin: 30px;" type="text" id="option2" />
+				<button class="btn btn-primary" style="background-color: Transparent;color:black;border-color: #000000;">Search</button>
 			</form>
 		</div>
 	</div>

@@ -107,7 +107,7 @@
                             <br></br>
                             <br></br>
                             <br></br>
-                            <button type="submit" class="btn btn-primary">Add community</button>
+                            <button type="submit" class="btn btn-primary" style="background-color: Transparent;color:black;border-color: #000000;margin:30px;">Add community</button>
                      </div>
                  </div>
 
@@ -119,13 +119,12 @@
          <h2>Communities</h2>
           <div class="form-group">
              <form>
-             <div id='selectowner' >
-            <select class="form-control" id="SelectCommunity">
+             <div class="col-l-5 col-md-5 col-sm-5 col-xs-12 col-md-offset-2" style="margin-top:20px;">
+            <select class="form-control" id="SelectCommunity" style="border-radius: 0px !important; -webkit-appearance: none;">
                 <option th:each="community: ${communities}" th:value="${community.cif}" th:text="${community.cif}"></option>
              </select></div>
-             <br></br>
-             <div class="col-l-7 col-md-7 col-sm-7 col-xs-7 col-md-offset-5" >
-              <a href='/communityPage/' class="btn btn-primary">Modify community</a>
+             <div class="col-l-3 col-md-3 col-sm-3 col-xs-12 col-md-offset-2" style="margin-top:10px;">
+              <a href='/communityPage/' class="btn btn-primary" style="background-color: Transparent;color:black;border-color: #000000;">Modify community</a>
              </div>
              </form>
 

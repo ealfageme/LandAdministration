@@ -52,5 +52,4 @@ public class CommunityController {
 		communityRepository.save(community);
 		return "redirect:/communityPage/"+cifCommunity;
 	}
->>>>>>> 4d323e41f0b7d36b3d2f4ba05f0c804c43971715
 }

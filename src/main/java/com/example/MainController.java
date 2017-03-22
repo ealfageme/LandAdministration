@@ -78,7 +78,7 @@ public class MainController {
 				model.addAttribute("search", properties2);				
 				break;
 			case "wholeCommunity":
-				model.addAttribute("search", communityRepository.findByCif(cif));
+				model.addAttribute("search", propertyRepository.findByCommunity(communityRepository.findByCif(cif)));
 				break;
 		}
 		

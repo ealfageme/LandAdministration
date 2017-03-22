@@ -10,5 +10,5 @@ import com.example.Entities.Property;
 public interface PropertyRepository extends JpaRepository<Property,Long> {
 	List<Property> findByNumberAndCommunity(int number,Community community);
 	List<Property> findByNumberAndFloorAndCommunity(int number,int floor,Community community);
-	
+	List<Property> findByCommunity(Community community);
 }

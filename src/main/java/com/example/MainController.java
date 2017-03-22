@@ -7,11 +7,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
-
-import com.example.Entities.Property;
 import com.example.Repositories.CommunityRepository;
 import com.example.Repositories.OwnerRepository;
-import com.example.Repositories.PropertyRepository;
+
 
 @Controller
 public class MainController {
@@ -37,11 +35,6 @@ public class MainController {
 	}
 	
 	
-	
-	@RequestMapping(value="/communityPage/{cif}", method = RequestMethod.GET)
-	public String communityPage(Model model, @PathVariable String cif) {	
-		return "communityPage";
-	}
 
 
 

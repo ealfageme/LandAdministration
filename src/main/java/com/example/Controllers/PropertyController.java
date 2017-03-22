@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.example.Entities.Community;
 import com.example.Entities.Owner;
 import com.example.Entities.Property;
 import com.example.Repositories.CommunityRepository;
@@ -34,18 +35,39 @@ public class PropertyController {
 	
 	@RequestMapping(value="/property/", method = RequestMethod.POST)
 	public String propertyPost(Model model, @RequestParam int portalnumber,@RequestParam int floor,@RequestParam char letter,
-			@RequestParam long selectowner) {
-		System.out.println(selectowner);
+			@RequestParam long selectowner, @RequestParam String selectcommunity) {
 		Property property = new Property (portalnumber, floor, letter , 0);
-		//property.setCommunity(community);
+		System.out.println(selectcommunity);
+		Community community =communityRepository.findByCif(selectcommunity);
+		
+		property.setCommunity(community);
 		Owner owner = ownerRepository.findById(selectowner);
 		property.setOwner(owner);
 		propertyRepository.save(property);
 		return "property";
 	}
 	
+	
 	@RequestMapping(value="/propertyPage/{id}", method = RequestMethod.GET)
-	public String propertyPage(Model model, @PathVariable long id) {
+	public String propertyPageGet(Model model, @PathVariable long id) {
+		model.addAttribute("communities", communityRepository.findAll());
+		model.addAttribute("property", propertyRepository.findOne(id));
+		model.addAttribute("owners", ownerRepository.findAll());
+		return "propertyPage";
+	}
+	
+	@RequestMapping(value="/propertyPage/{id}", method = RequestMethod.POST)
+	public String propertyPagePost(Model model, @PathVariable long id, @RequestParam int portalnumber, @RequestParam int floor, @RequestParam char letter, @RequestParam String ownerCommunity, @RequestParam String propertyCommunity) {
+		model.addAttribute("property", propertyRepository.findOne(id));
+		model.addAttribute("communities", communityRepository.findAll());
+		model.addAttribute("owners", ownerRepository.findAll());
+		Property property = propertyRepository.findOne(id);
+		property.setNumber(portalnumber);
+		property.setFloor(floor);
+		property.setLetter(letter);
+		property.setOwner(ownerRepository.findByName(ownerCommunity));
+		property.setCommunity(communityRepository.findByCif(propertyCommunity));
+		propertyRepository.save(property);
 		return "propertyPage";
 	}
 }

@@ -1,181 +1,167 @@
 <!DOCTYPE html>
-<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
 
-    <meta charset="utf-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <meta name="description" content=""/>
-    <meta name="author" content=""/>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="" />
+<meta name="author" content="" />
 
-    <title>Property Page</title>
+<title>Property Page</title>
 
-    <!-- Bootstrap Core CSS -->
-    <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+<!-- Bootstrap Core CSS -->
+<link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
 
-    <!-- Theme CSS -->
-    <link href="/css/clean-blog.min.css" rel="stylesheet"/>
+<!-- Theme CSS -->
+<link href="/css/clean-blog.min.css" rel="stylesheet" />
 
-    <!-- Custom Fonts -->
-    <link href="/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
-    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'/>
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'/>
+<!-- Custom Fonts -->
+<link href="/vendor/font-awesome/css/font-awesome.min.css"
+	rel="stylesheet" type="text/css" />
+<link
+	href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic'
+	rel='stylesheet' type='text/css' />
+<link
+	href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+	rel='stylesheet' type='text/css' />
 
 </head>
 
 <body>
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
-        <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    Menu <i class="fa fa-bars"></i>
-                </button>
-                <a class="navbar-brand" href="/">Home</a>
-            </div>
+	<!-- Navigation -->
+	<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+		<div class="container-fluid">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header page-scroll">
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
+					data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span> Menu <i
+						class="fa fa-bars"></i>
+				</button>
+				<a class="navbar-brand" href="/">Home</a>
+			</div>
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="/owner/">Owner</a>
-                    </li>
-                    <li>
-                        <a href="/property/">Property</a>
-                    </li>
-                    <li>
-                        <a href="/community/">Community</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse"
+				id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="/owner/">Owner</a></li>
+					<li><a href="/property/">Property</a></li>
+					<li><a href="/community/">Community</a></li>
+				</ul>
+			</div>
+			<!-- /.navbar-collapse -->
+		</div>
+		<!-- /.container -->
+	</nav>
 
-    <!-- Page Header -->
-    <!-- Set your background image for this header on the line below. -->
-    <header class="intro-header" style="background-image: url('/img/community.jpg')">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                    <div class="page-heading">
-                        <h1>Property</h1>
+	<!-- Page Header -->
+	<!-- Set your background image for this header on the line below. -->
+	<header class="intro-header"
+		style="background-image: url('/img/community.jpg')">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+					<div class="page-heading">
+						<h1>Property</h1>
 
-                        <hr class="small"/>
-                        <span class="subheading">Add, Modify, Query</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-    <!-- Post Content -->
-     <div class="container">
-        <div class="row">
-           <h2>Property 1</h2>
-            <div class="col-l-12 col-md-12 col-sm-12 col-xs-12" >
-             <form>
-                 <div class="form-group" >
-                      <div class="col-l-3 col-md-3 col-sm-3 col-xs-12 col-md-offset-2">
-                          <label>Portal number</label>
-                          <input  name ='portalnumber'  value='32'/>
-                          <label>Floor</label>
-                          <input name ='floor'  value='2º'/>
-                          <label>Letter</label>
-                          <input name ='letter'  value='A'/>
-                     </div>
-                      <div class="col-l-3 col-md-3 col-sm-3 col-xs-12" >
-                          <label>Owner</label>
-                          <select class="form-control" id="Select1" >
-                              <option >John Snow</option>
-                              <option>John Cena</option>
-                              <option>John Travolta</option>
-                              <option>John Wick</option>
-                              <option>John Wayle</option>
-                        </select>
-                        <label>Community</label>
-                          <select class="form-control" id="Select2" >
-                              <option>community1</option>
-                              <option>community2</option>
-                              <option >community3</option>
-                              <option>community4</option>
-                              <option>community5</option>
-                        </select>
-                     </div>
+						<hr class="small" />
+						<span class="subheading">Add, Modify, Query</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<!-- Post Content -->
+	<div class="container">
+		<div class="row">
+			<h2
+				th:text="|Number: ${property.number}, Letter: ${property.letter}, Floor: ${property.floor} |"></h2>
+			<div class="col-l-12 col-md-12 col-sm-12 col-xs-12">
+				<form method="post">
+					<div class="form-group">
+						<div class="col-l-3 col-md-3 col-sm-3 col-xs-12 col-md-offset-2">
+							<label>Portal number</label> <input name='portalnumber'
+								th:value='${property.number}' /> <label>Floor</label> <input
+								name='floor' th:value='${property.floor}' /> <label>Letter</label>
+							<input name='letter' th:value='${property.letter}' />
+						</div>
+						<div class="col-l-3 col-md-3 col-sm-3 col-xs-12">
+							<label>Owner</label> <select class="form-control"
+								id="SelectOwner2" name="ownerCommunity">
+								<option th:each="owner: ${owners}" th:value="${owner.name}"
+									th:text="${owner.name}"
+									th:if="${owner.name} == ${property.owner.name}"></option>
+								<option th:each="owner: ${owners}" th:value="${owner.name}"
+									th:text="${owner.name}"
+									th:if="${owner.name} != ${property.owner.name}"></option>
+							</select> <label>Community</label> <select name="propertyCommunity"
+								class="form-control" id="SelectCommunity2">
+								<option th:each="community: ${communities}"
+									th:value="${community.cif}" th:text="${community.cif}"
+									th:if="${community.cif} == ${property.community.cif}"></option>
+								<option th:each="community: ${communities}"
+									th:value="${community.cif}" th:text="${community.cif}"
+									th:if="${community.cif} != ${property.community.cif}"></option>
+							</select>
+						</div>
+						<div class="col-l-2 col-md-2 col-sm-2 col-xs-12">
+							<br></br> <br></br> <br></br> <br></br> <br></br> <br></br>
+							<button type="submit" class="btn btn-primary">Modify
+								property</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<br></br>
 
+	</div>
 
-                     <div class="col-l-2 col-md-2 col-sm-2 col-xs-12" >
-                            <br></br>
-                            <br></br>
-                            <br></br>
-                            <br></br>
-                            <br></br>
-                            <br></br>
-                          <button type="submit" class="btn btn-primary">Modify property</button>
-                     </div>
-                 </div>
+	<!-- Footer -->
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+					<ul class="list-inline text-center">
+						<li><a href="#"> <span class="fa-stack fa-lg"> <i
+									class="fa fa-circle fa-stack-2x"></i> <i
+									class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+							</span>
+						</a></li>
+						<li><a href="#"> <span class="fa-stack fa-lg"> <i
+									class="fa fa-circle fa-stack-2x"></i> <i
+									class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+							</span>
+						</a></li>
+						<li><a href="#"> <span class="fa-stack fa-lg"> <i
+									class="fa fa-circle fa-stack-2x"></i> <i
+									class="fa fa-github fa-stack-1x fa-inverse"></i>
+							</span>
+						</a></li>
+					</ul>
+					<p class="copyright text-muted">Copyright &copy; Your Website
+						2016</p>
+				</div>
+			</div>
+		</div>
+	</footer>
 
+	<!-- jQuery -->
+	<script src="/vendor/jquery/jquery.min.js"></script>
 
-            </form>
-         </div>
-        </div>
-         <br></br>
+	<!-- Bootstrap Core JavaScript -->
+	<script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
 
-    </div>
+	<!-- Contact Form JavaScript -->
+	<script src="/js/jqBootstrapValidation.js"></script>
+	<script src="/js/contact_me.js"></script>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                    <ul class="list-inline text-center">
-                        <li>
-                            <a href="#">
-                                <span class="fa-stack fa-lg">
-                                    <i class="fa fa-circle fa-stack-2x"></i>
-                                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-                                </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <span class="fa-stack fa-lg">
-                                    <i class="fa fa-circle fa-stack-2x"></i>
-                                    <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-                                </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <span class="fa-stack fa-lg">
-                                    <i class="fa fa-circle fa-stack-2x"></i>
-                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-                                </span>
-                            </a>
-                        </li>
-                    </ul>
-                    <p class="copyright text-muted">Copyright &copy; Your Website 2016</p>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- jQuery -->
-    <script src="/vendor/jquery/jquery.min.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
-
-    <!-- Contact Form JavaScript -->
-    <script src="/js/jqBootstrapValidation.js"></script>
-    <script src="/js/contact_me.js"></script>
-
-    <!-- Theme JavaScript -->
-    <script src="/js/clean-blog.min.js"></script>
+	<!-- Theme JavaScript -->
+	<script src="/js/clean-blog.min.js"></script>
 
 </body>
 

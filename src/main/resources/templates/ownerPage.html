@@ -78,25 +78,23 @@
     <!-- Post Content -->
      <div class="container">
         <div class="row">
-           <h2>Jonh Snow</h2>
+           <h2 th:text="${owner.name}"></h2>
             <div class="col-l-10 col-md-10 col-sm-10 col-xs-10 col-md-offset-2" >
-             <form>
+             <form method="post">
                  <div class="form-group" >
                       <div class="col-l-3 col-md-3 col-sm-3 col-xs-12" >
                           <label>Name</label>
-                          <input  name ='ownername' value ='John'/>
+                          <input  name ='ownername' th:value ='${owner.name}'/>
                           <label>Surname</label>
-                          <input name ='ownersurname' value ='Snow'/>
+                          <input name ='ownersurname' th:value ='${owner.surname}'/>
                           <label>DNI</label>
-                          <input  name='ownername' value ='4582357A'/>
+                          <input  name='ownerdni' th:value ='${owner.dni}'/>
                      </div>
                        <div class="col-l-3 col-md-3 col-sm-3 col-xs-12 col-md-offset-1" >
                            <label>Phone</label>
-                           <input name ='ownerphone' value ='665458526'/>
-                           <label>Percentaje</label>
-                           <input name ='ownerperc' value ='35%'/>
-                           <label>Bank Accout</label>
-                           <input name ='owneraccount' value ='96745-4584845-54'/>
+                           <input name ='ownerphone' th:value ='${owner.numberPhone}'/>
+                           <label>Bank Account</label>
+                           <input name ='owneraccount' th:value ='${owner.bankAccount}'/>
                         </div>
 
                      <div class="col-l-3 col-md-3 col-sm-3 col-xs-12 col-md-offset-1" >

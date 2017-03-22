@@ -52,22 +52,9 @@ public class MainController {
 		return "communityPage";
 	}
 	
-	@RequestMapping(value="/owner/", method = RequestMethod.GET)
-	public String ownerGet(Model model) {	
-		model.addAttribute("owners", ownerRepository.findAll());
-		return "owner";
-	}
+
 	
-	@RequestMapping(value="/owner/", method = RequestMethod.POST)
-	public String ownerPost(Model model) {	
-		model.addAttribute("owners", ownerRepository.findAll());
-		return "owner";
-	}
-	
-	@RequestMapping(value="/ownerPage/{ownerName}", method = RequestMethod.GET)
-	public String ownerPage(Model model, @PathVariable String ownerName) {	
-		return "ownerPage";
-	}
+
 	@RequestMapping(value="/property/", method = RequestMethod.GET)
 	public String propertyGet(Model model) {	
 		model.addAttribute("properties", propertyRepository.findAll());

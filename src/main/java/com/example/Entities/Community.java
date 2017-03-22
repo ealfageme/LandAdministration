@@ -77,15 +77,16 @@ public class Community {
 	public void setCommunityproperties(List<Property> communityproperties) {
 		this.communityproperties = communityproperties;
 	}
-
 	public long getId() {
 		return id;
 	}
-
 	public void setId(long id) {
 		this.id = id;
 	}
-	
-	
-
+	public String getBankAccount() {
+		return bankAccount;
+	}
+	public void setBankAccount(String bankAccount) {
+		this.bankAccount = bankAccount;
+	}
 }

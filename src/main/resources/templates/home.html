@@ -41,7 +41,7 @@
 					<span class="sr-only">Toggle navigation</span> Menu <i
 						class="fa fa-bars"></i>
 				</button>
-				<a class="navbar-brand" href="/home/">Home</a>
+				<a class="navbar-brand" href="/">Home</a>
 			</div>
 
 			<!-- Collect the nav links, forms, and other content for toggling -->
@@ -79,19 +79,24 @@
 	<!-- Main Content -->
 	<div class="container">
 		<div class="row">
-			<form>
-				<span>Select Option</span>
-				<select class="form-control" style="max-width:30%; margin:20px;" id="Select1" name='optionSelected'>
+			<form method="post">
+				<span>Select Community</span> 
+				<select class="form-control" style="max-width: 30%; margin: 20px;" id="Select2" name='cif' >
+					<option th:each="community: ${communities}" th:value="${community.cif}" th:text="${community.cif}"></option>
+				</select>
+				 <span>Select Search Option</span> <select class="form-control"
+					style="max-width: 30%; margin: 20px;" id="Select1"
+					name='optionSelected'>
 					<option value="portalNumber">Portal number</option>
 					<option value="portalNumberFloor">Portal number and floor</option>
 					<option value="surname">Surname</option>
 					<option value="DNI">DNI</option>
 					<option value="wholeCommunity">Whole community</option>
-				</select>
-				<span id="text1" style=" margin:20px;"></span><input style=" margin:20px;" type="text" id="option1"/>
-				<span id="text2" style=" margin:20px;"></span><input style=" margin:20px;" type="text" id="option2"/>
+				</select> <span id="text1" style="margin: 20px;"></span> <input
+					style="margin: 20px;" type="text" id="option1" /> <span id="text2"
+					style="margin: 20px;"></span> <input style="margin: 20px;"
+					type="text" id="option2" />
 				<button>Search</button>
-
 			</form>
 		</div>
 	</div>

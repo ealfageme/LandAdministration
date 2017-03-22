@@ -1,16 +1,31 @@
 package com.example;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import com.example.Repositories.CommunityRepository;
 
 @Controller
 public class MainController {
+	
+	@Autowired
+	CommunityRepository communityRepository;
 
 	
-	@RequestMapping(value="/home/", method = RequestMethod.GET)
-	public String main(Model model) {	
+	@RequestMapping(value="/", method = RequestMethod.GET)
+	public String main(Model model) {
+		model.addAttribute("communities", communityRepository.findAll());
+		return "home";
+	}
+	
+	@RequestMapping(value="/", method = RequestMethod.POST)
+	public String main(Model model, @RequestParam (required=false) String cif) {
+		model.addAttribute("community", communityRepository.findByCif(cif));
+		model.addAttribute("communities", communityRepository.findAll());
 		return "home";
 	}
 	

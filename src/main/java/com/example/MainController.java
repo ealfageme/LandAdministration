@@ -33,8 +33,11 @@ public class MainController {
 		model.addAttribute("communities", communityRepository.findAll());
 		return "home";
 	}
+<<<<<<< HEAD
 	
 	
+=======
+>>>>>>> 4d323e41f0b7d36b3d2f4ba05f0c804c43971715
 
 
 

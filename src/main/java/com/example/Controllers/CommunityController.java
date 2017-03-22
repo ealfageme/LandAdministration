@@ -32,9 +32,25 @@ public class CommunityController {
 		return "community";
 	}
 	
+
 	@RequestMapping(value="/communityPage/{cif}", method = RequestMethod.GET)
-	public String communityPage(Model model, @PathVariable String cif) {	
+	public String communityPageGet(Model model, @PathVariable String cif) {	
+		model.addAttribute("community", communityRepository.findByCif(cif));
 		return "communityPage";
 	}
-
+	
+	@RequestMapping(value="/communityPage/{cif}", method = RequestMethod.POST)
+	public String communityPagePost(Model model, @PathVariable String cif, @RequestParam String cifCommunity, @RequestParam String street, @RequestParam int number, @RequestParam int postalCode, @RequestParam int population, @RequestParam String bankAccount) {
+		model.addAttribute("community", communityRepository.findByCif(cif));
+		Community community = communityRepository.findByCif(cif);
+		community.setCif(cifCommunity);
+		community.setStreet(street);
+		community.setNumber(number);
+		community.setPostalCode(postalCode);
+		community.setPopulation(population);
+		community.setBankAccount(bankAccount);
+		communityRepository.save(community);
+		return "redirect:/communityPage/"+cifCommunity;
+	}
+>>>>>>> 4d323e41f0b7d36b3d2f4ba05f0c804c43971715
 }

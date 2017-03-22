@@ -76,27 +76,27 @@
     <!-- Main Content -->
      <div class="container">
         <div class="row">
-           <h2>Community 1</h2>
+           <h2 th:text="${community.cif}"></h2>
             <div class="col-l-10 col-md-10 col-sm-10 col-xs-10 col-md-offset-2" >
              <form method="post">
                  <div class="form-group" >
                       <div class="col-l-3 col-md-3 col-sm-3 col-xs-12" >
                           <label>CIF</label>
-                          <input  name ='cif' value ='5881845A'/>
+                          <input  name ='cifCommunity' th:value ='${community.cif}'/>
                           <label>Street</label>
-                          <input name ='street' value ='C/Street'/>
+                          <input name ='street' th:value ='${community.street}'/>
                           <label>Number</label>
-                          <input name ='numercommunity' value ='21'/>
+                          <input name ='number' th:value ='${community.number}'/>
 
 
                      </div>
                       <div class="col-l-3 col-md-3 col-sm-3 col-xs-12 col-md-offset-1" >
                            <label>Postal Code</label>
-                          <input name ='postalcode' value ='A'/>
+                          <input name ='postalCode' th:value ='${community.postalCode}'/>
                           <label>Population</label>
-                          <input name ='population' value ='3294823'/>
+                          <input name ='population' th:value ='${community.population}'/>
                           <label>Bank account</label>
-                          <input name ='bankaccountco' value ='65485-845848-51518'/>
+                          <input name ='bankAccount' th:value ='${community.bankAccount}'/>
 
                      </div>
 

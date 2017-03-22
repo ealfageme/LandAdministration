@@ -126,21 +126,13 @@
          <br></br>
          <h2>Properties</h2>
          <div class="form-group">
-             <form>
-
-            <select class="form-control" id="Select2">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
+            <select  class="form-control" id="SelectProperty">
+                <option th:each="property: ${properties}" th:value="${property.id}" th:attr="number=${property.number}, letter=${property.letter}, floor=${property.floor}"></option>
              </select>
              <br></br>
              <div class="col-l-7 col-md-7 col-sm-7 col-xs-7 col-md-offset-5" >
-                 <a href='propertyPage.html'><button type="submit" class="btn btn-primary">modify property</button></a>
+              <button onClick="property();" class="btn btn-primary">Modify property</button>
              </div>
-             </form>
-
          </div>
     </div>
 
@@ -195,7 +187,7 @@
 
     <!-- Theme JavaScript -->
     <script src="/js/clean-blog.min.js"></script>
-
+ 	<script src="/js/property.js"></script>
 </body>
 
 </html>

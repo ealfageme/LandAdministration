@@ -3,12 +3,14 @@ package com.example;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.example.Repositories.CommunityRepository;
 import com.example.Repositories.OwnerRepository;
+import com.example.Repositories.PropertyRepository;
 
 @Controller
 public class MainController {
@@ -17,6 +19,8 @@ public class MainController {
 	CommunityRepository communityRepository;
 	@Autowired
 	OwnerRepository ownerRepository;
+	@Autowired
+	PropertyRepository propertyRepository;
 	
 	@RequestMapping(value="/", method = RequestMethod.GET)
 	public String main(Model model) {
@@ -60,12 +64,13 @@ public class MainController {
 		return "owner";
 	}
 	
-	@RequestMapping(value="/ownerPage/", method = RequestMethod.GET)
-	public String ownerPage(Model model) {	
+	@RequestMapping(value="/ownerPage/{ownerName}", method = RequestMethod.GET)
+	public String ownerPage(Model model, @PathVariable String ownerName) {	
 		return "ownerPage";
 	}
 	@RequestMapping(value="/property/", method = RequestMethod.GET)
 	public String propertyGet(Model model) {	
+		model.addAttribute("properties", propertyRepository.findAll());
 		return "property";
 	}
 	
@@ -74,8 +79,8 @@ public class MainController {
 		return "property";
 	}
 	
-	@RequestMapping(value="/propertyPage/", method = RequestMethod.GET)
-	public String propertyPage(Model model) {	
+	@RequestMapping(value="/propertyPage/{id}", method = RequestMethod.GET)
+	public String propertyPage(Model model, @PathVariable long id) {
 		return "propertyPage";
 	}
 

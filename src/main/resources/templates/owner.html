@@ -116,7 +116,6 @@
          <br></br>
          <h2>Owners</h2>
          <div class="form-group">
-             <form>
              <div>
             <select  class="form-control" id="SelectOwner">
                 <option th:each="owner: ${owners}" th:value="${owner.name}" th:text="${owner.name}"></option>
@@ -124,9 +123,8 @@
              </div>
              <br></br>
              <div class="col-l-7 col-md-7 col-sm-7 col-xs-7 col-md-offset-5" >
-                 <button onClick="owner()" class="btn btn-primary">Modify owner</button>
+                 <button onClick="owner();" class="btn btn-primary">Modify owner</button>
              </div>
-             </form>
 
          </div>
     </div>

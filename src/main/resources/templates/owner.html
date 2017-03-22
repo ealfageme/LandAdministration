@@ -105,7 +105,7 @@
                             <br></br>
                             <br></br>
                             <br></br>
-                           <button type="submit" class="btn btn-primary">Add owner</button>
+                           <button type="submit" class="btn btn-primary" style="background-color: Transparent;color:black;border-color: #000000; margin:30px;">Add owner</button>
                      </div>
                  </div>
 
@@ -116,14 +116,13 @@
          <br></br>
          <h2>Owners</h2>
          <div class="form-group">
-             <div>
-            <select  class="form-control" id="SelectOwner">
+             <div class="col-l-5 col-md-5 col-sm-5 col-xs-12 col-md-offset-2" style="margin-top:20px;">
+            <select  class="form-control" id="SelectOwner" style="border-radius: 0px !important; -webkit-appearance: none;">
                 <option th:each="owner: ${owners}" th:value="${owner.name}" th:text="${owner.name}"></option>
              </select>
              </div>
-             <br></br>
-             <div class="col-l-7 col-md-7 col-sm-7 col-xs-7 col-md-offset-5" >
-                 <button onClick="owner();" class="btn btn-primary">Modify owner</button>
+             <div class="col-l-3 col-md-3 col-sm-3 col-xs-12 col-md-offset-2" style="margin-top:10px;">
+                 <button onClick="owner();" class="btn btn-primary" style="background-color: Transparent;color:black;border-color: #000000;">Modify owner</button>
              </div>
 
          </div>

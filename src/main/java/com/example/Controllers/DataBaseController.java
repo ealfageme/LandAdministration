@@ -28,12 +28,14 @@ public class DataBaseController implements CommandLineRunner {
 	@PostConstruct
     private void initDatabase() {
 		
-		Owner owner1 = new Owner("78945329G", "John","Snow", 695339576);
-		Owner owner2 = new Owner("12242329H", "John","Wick", 695339576);
-		Owner owner3 = new Owner("87645329S", "Emmanuel","Rodrigues", 695339576);
-		Owner owner4 = new Owner("32945329Y", "Amapola","Fuertes", 695339576);
-		Owner owner5 = new Owner("23945329A", "Paola","Lola", 695339576);
-		Owner owner6 = new Owner("38945329B", "Hector","Domingues", 695339576);
+
+		Owner owner1 = new Owner("78945329G", "John","Snow", 695339576,"234567-8765");
+		Owner owner2 = new Owner("12242329H", "John","Wick", 695339576,"234567-8765");
+		Owner owner3 = new Owner("87645329S", "Emmanuel","Rodrigues", 695339576,"234567-8765");
+		Owner owner4 = new Owner("32945329Y", "Amapola","Fuertes", 695339576,"234567-8765");
+		Owner owner5 = new Owner("23945329A", "Paola","Lola", 695339576,"234567-8765");
+		Owner owner6 = new Owner("38945329B", "Hector","Domingues", 695339576,"234567-8765");
+
 		
 		ownerRepository.save(owner1);
 		ownerRepository.save(owner2);

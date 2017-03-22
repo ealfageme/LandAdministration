@@ -107,7 +107,7 @@
                             <br></br>
                             <br></br>
                             <br></br>
-                            <button type="submit" class="btn btn-primary">Add community</button>
+                            <button type="submit" class="btn btn-primary" style="background-color: Transparent;color:black;border-color: #000000;margin:30px;">Add community</button>
                      </div>
                  </div>
 
@@ -118,17 +118,14 @@
          <br></br>
          <h2>Communities</h2>
           <div class="form-group">
-             <form>
              <div id='selectowner' >
             <select class="form-control" id="SelectCommunity">
                 <option th:each="community: ${communities}" th:value="${community.cif}" th:text="${community.cif}"></option>
              </select></div>
              <br></br>
              <div class="col-l-7 col-md-7 col-sm-7 col-xs-7 col-md-offset-5" >
-              <a href='/communityPage/' class="btn btn-primary">Modify community</a>
+              <button onClick="community();" class="btn btn-primary">Modify community</button>
              </div>
-             </form>
-
          </div>
 
     </div>
@@ -183,7 +180,7 @@
 
     <!-- Theme JavaScript -->
     <script src="/js/clean-blog.min.js"></script>
-
+<script src="/js/community.js"></script>
 </body>
 
 </html>

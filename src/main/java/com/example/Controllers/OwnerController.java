@@ -20,6 +20,7 @@ public class OwnerController {
 	
 	@RequestMapping(value="/ownerPage/{ownerName}", method = RequestMethod.GET)
 	public String ownerPage(Model model, @PathVariable String ownerName) {	
+		model.addAttribute("owner", ownerRepository.findByName(ownerName));
 		return "ownerPage";
 	
 	}
@@ -28,18 +29,28 @@ public class OwnerController {
 			@RequestParam String ownerdni,@RequestParam long ownerphone, 
 			@RequestParam String ownerperc,@RequestParam String owneraccount) {
 		model.addAttribute("owners", ownerRepository.findAll());
-		Owner owner = new Owner (ownerdni, ownername, ownersurname, ownerphone);
+		Owner owner = new Owner (ownerdni, ownername, ownersurname, ownerphone, owneraccount);
 		ownerRepository.save(owner);
 		return "owner";
 	}
 	@RequestMapping(value="/owner/", method = RequestMethod.GET)
-	public String createowner(Model model) {
+	public String createownerGet(Model model) {
 		model.addAttribute("owners", ownerRepository.findAll());
 		return "owner";
 	}
 	
-	@RequestMapping(value="/ownerPage/", method = RequestMethod.GET)
-	public String ownerPage(Model model) {	
-		return "ownerPage";
+	@RequestMapping(value="/ownerPage/{ownerName}", method = RequestMethod.POST)
+	public String ownerPagePut(Model model, @PathVariable String ownerName, @RequestParam String ownername,@RequestParam String ownersurname,
+			@RequestParam String ownerdni,@RequestParam long ownerphone, @RequestParam String owneraccount) {	
+		model.addAttribute("owner", ownerRepository.findByName(ownerName));
+		Owner owner = ownerRepository.findByName(ownerName);
+		owner.setBankAccount(owneraccount);
+		owner.setDni(ownerdni);
+		owner.setName(ownername);
+		owner.setNumberPhone(ownerphone);
+		owner.setSurname(ownersurname);
+		ownerRepository.save(owner);
+		return "redirect:/ownerPage/"+ownername;
+	
 	}
 }

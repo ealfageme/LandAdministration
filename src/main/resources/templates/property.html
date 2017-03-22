@@ -127,7 +127,7 @@
          <h2>Properties</h2>
          <div class="form-group">
             <select  class="form-control" id="SelectProperty">
-                <option th:each="property: ${properties}" th:value="${property.id}" th:attr="number=${property.number}, letter=${property.letter}, floor=${property.floor}"></option>
+                <option th:each="property: ${properties}" th:value="${property.id}" th:attr="number=${property.number}, letter=${property.letter}, floor=${property.floor}" th:text="|Number: ${property.number}, Letter: ${property.letter}, Floor: ${property.floor} |"></option>
              </select>
              <br></br>
              <div class="col-l-7 col-md-7 col-sm-7 col-xs-7 col-md-offset-5" >

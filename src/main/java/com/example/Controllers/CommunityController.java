@@ -32,7 +32,7 @@ public class CommunityController {
 		return "community";
 	}
 	
-	
+
 	@RequestMapping(value="/communityPage/{cif}", method = RequestMethod.GET)
 	public String communityPageGet(Model model, @PathVariable String cif) {	
 		model.addAttribute("community", communityRepository.findByCif(cif));
@@ -52,4 +52,5 @@ public class CommunityController {
 		communityRepository.save(community);
 		return "redirect:/communityPage/"+cifCommunity;
 	}
+>>>>>>> 4d323e41f0b7d36b3d2f4ba05f0c804c43971715
 }

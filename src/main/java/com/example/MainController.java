@@ -13,9 +13,11 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.example.Entities.Community;
 import com.example.Entities.Owner;
 import com.example.Entities.Property;
+
 import com.example.Repositories.CommunityRepository;
 import com.example.Repositories.OwnerRepository;
 import com.example.Repositories.PropertyRepository;
+
 
 @Controller
 public class MainController {
@@ -82,9 +84,6 @@ public class MainController {
 		
 		return "home";
 	}
-
-
-
 	
 	@RequestMapping("/error/")
 	public String error(Model model) {

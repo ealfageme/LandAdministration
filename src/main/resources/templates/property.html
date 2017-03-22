@@ -16,6 +16,7 @@
 
     <!-- Theme CSS -->
     <link href="/css/clean-blog.min.css" rel="stylesheet"/>
+    <link href="/css/style.css" rel="stylesheet"/>
 
     <!-- Custom Fonts -->
     <link href="/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
@@ -90,7 +91,7 @@
                      </div>
                       <div class="col-l-3 col-md-3 col-sm-3 col-xs-12" >
                           <label>Owner</label>
-                          <select class="form-control" id="exampleSelect1">
+                          <select class="form-control" id="exampleSelect1" style="border-radius: 0px !important; -webkit-appearance: none;">
                               <option>John Snow</option>
                               <option>John Cena</option>
                               <option>John Travolta</option>
@@ -98,7 +99,7 @@
                               <option>John Wayle</option>
                         </select>
                         <label>Community</label>
-                          <select class="form-control" id="exampleSelect1">
+                          <select class="form-control" id="exampleSelect1" style="border-radius: 0px !important; -webkit-appearance: none;">
                               <option>community1</option>
                               <option>community1</option>
                               <option>community1</option>
@@ -108,14 +109,8 @@
                      </div>
 
 
-                     <div class="col-l-2 col-md-2 col-sm-2 col-xs-12" >
-                            <br></br>
-                            <br></br>
-                            <br></br>
-                            <br></br>
-                            <br></br>
-                            <br></br>
-                          <button type="submit" class="btn btn-primary">Add property</button>
+                     <div class="col-l-2 col-md-2 col-sm-2 col-xs-12 col-md-offset-1" >      
+                          <button type="submit" class="btn btn-primary" style="margin-top:10px;background-color: Transparent;color:black;border-color: #000000;">Add property</button>
                      </div>
                  </div>
 
@@ -124,14 +119,17 @@
          </div>
         </div>
          <br></br>
-         <h2>Properties</h2>
-         <div class="form-group">
-            <select  class="form-control" id="SelectProperty">
+         
+        
+        <h2>Properties</h2>
+        <div class="col-l-12 col-md-12 col-sm-12 col-xs-12 ">
+        	<div class="col-l-5 col-md-5 col-sm-5 col-xs-12 col-md-offset-2" style="margin-top:20px;">
+            <select  class="form-control" id="SelectProperty" style="border-radius: 0px !important; -webkit-appearance: none;">
                 <option th:each="property: ${properties}" th:value="${property.id}" th:attr="number=${property.number}, letter=${property.letter}, floor=${property.floor}" th:text="|Number: ${property.number}, Letter: ${property.letter}, Floor: ${property.floor} |"></option>
              </select>
-             <br></br>
-             <div class="col-l-7 col-md-7 col-sm-7 col-xs-7 col-md-offset-5" >
-              <button onClick="property();" class="btn btn-primary">Modify property</button>
+             </div>
+             <div class="col-l-3 col-md-3 col-sm-3 col-xs-12 col-md-offset-2" style="margin-top:10px;">
+              <button onClick="property();" class="btn btn-primary" style="background-color: Transparent;color:black;border-color: #000000;">Modify property</button>
              </div>
          </div>
     </div>

@@ -120,12 +120,8 @@
           <div class="form-group">
              <form>
              <div id='selectowner' >
-            <select class="form-control" id="Select2">
-                <option>Community 1</option>
-                <option>Community 2</option>
-                <option>Community 3</option>
-                <option>Community 4</option>
-                <option>Community 5</option>
+            <select class="form-control" id="SelectCommunity">
+                <option th:each="community: ${communities}" th:value="${community.cif}" th:text="${community.cif}"></option>
              </select></div>
              <br></br>
              <div class="col-l-7 col-md-7 col-sm-7 col-xs-7 col-md-offset-5" >

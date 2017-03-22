@@ -118,12 +118,8 @@
          <div class="form-group">
              <form>
              <div>
-            <select  class="form-control" id="Select2">
-                <option>john Snow</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
+            <select  class="form-control" id="SelectOwner">
+                <option th:each="owner: ${owners}" th:value="${owner.name}" th:text="${owner.name}"></option>
              </select>
              </div>
              <br></br>

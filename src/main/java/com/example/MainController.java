@@ -8,13 +8,15 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.example.Repositories.CommunityRepository;
+import com.example.Repositories.OwnerRepository;
 
 @Controller
 public class MainController {
 	
 	@Autowired
 	CommunityRepository communityRepository;
-
+	@Autowired
+	OwnerRepository ownerRepository;
 	
 	@RequestMapping(value="/", method = RequestMethod.GET)
 	public String main(Model model) {
@@ -30,7 +32,14 @@ public class MainController {
 	}
 	
 	@RequestMapping(value="/community/", method = RequestMethod.GET)
-	public String community(Model model) {	
+	public String communityGet(Model model) {	
+		model.addAttribute("communities", communityRepository.findAll());
+		return "community";
+	}
+	
+	@RequestMapping(value="/community/", method = RequestMethod.POST)
+	public String communityPost(Model model) {	
+		model.addAttribute("communities", communityRepository.findAll());
 		return "community";
 	}
 	
@@ -40,7 +49,14 @@ public class MainController {
 	}
 	
 	@RequestMapping(value="/owner/", method = RequestMethod.GET)
-	public String owner(Model model) {	
+	public String ownerGet(Model model) {	
+		model.addAttribute("owners", ownerRepository.findAll());
+		return "owner";
+	}
+	
+	@RequestMapping(value="/owner/", method = RequestMethod.POST)
+	public String ownerPost(Model model) {	
+		model.addAttribute("owners", ownerRepository.findAll());
 		return "owner";
 	}
 	
@@ -49,7 +65,12 @@ public class MainController {
 		return "ownerPage";
 	}
 	@RequestMapping(value="/property/", method = RequestMethod.GET)
-	public String property(Model model) {	
+	public String propertyGet(Model model) {	
+		return "property";
+	}
+	
+	@RequestMapping(value="/property/", method = RequestMethod.POST)
+	public String propertyPost(Model model) {	
 		return "property";
 	}
 	

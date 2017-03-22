@@ -19,20 +19,20 @@ public class Community {
 	private int number;
 	private int postalCode;
 	private int population;
-	private int bankCount;
+	private String bankAccount;
 	@OneToMany(mappedBy="community")
 	private List<Property> communityproperties=new ArrayList<>();
 	
 	public Community(){}
 	
-	public Community(String cif, String street, int number, int postalCode, int population, int bankCount) {
+	public Community(String cif, String street, int number, int postalCode, int population, String bankCount) {
 		super();
 		this.cif = cif;
 		this.street = street;
 		this.number = number;
 		this.postalCode = postalCode;
 		this.population = population;
-		this.bankCount = bankCount;
+		this.bankAccount = bankCount;
 		
 	}
 	public String getCif() {
@@ -65,11 +65,11 @@ public class Community {
 	public void setPopulation(int population) {
 		this.population = population;
 	}
-	public int getBankCount() {
-		return bankCount;
+	public String getBankCount() {
+		return bankAccount;
 	}
-	public void setBankCount(int bankCount) {
-		this.bankCount = bankCount;
+	public void setBankCount(String bankCount) {
+		this.bankAccount = bankCount;
 	}
 	public List<Property> getCommunityproperties() {
 		return communityproperties;

@@ -78,7 +78,7 @@
         <div class="row">
            <h2>Add new Property</h2>
             <div class="col-l-12 col-md-12 col-sm-12 col-xs-12" >
-             <form>
+             <form method='post'>
                  <div class="form-group" >
                       <div class="col-l-3 col-md-3 col-sm-3 col-xs-12 col-md-offset-2">
                           <label>Portal number</label>
@@ -90,20 +90,13 @@
                      </div>
                       <div class="col-l-3 col-md-3 col-sm-3 col-xs-12" >
                           <label>Owner</label>
-                          <select class="form-control" id="exampleSelect1">
-                              <option>John Snow</option>
-                              <option>John Cena</option>
-                              <option>John Travolta</option>
-                              <option>John Wick</option>
-                              <option>John Wayle</option>
+                          <select class="form-control" id="exampleSelect1" name ="selectowner">
+                             <option th:each="owner: ${owners}" th:value="| ${owner.id}" th:text="| ${owner.name} ${owner.surname} |"></option>
                         </select>
                         <label>Community</label>
                           <select class="form-control" id="exampleSelect1">
-                              <option>community1</option>
-                              <option>community1</option>
-                              <option>community1</option>
-                              <option>community1</option>
-                              <option>community1</option>
+                              <option th:each="community: ${communities}" th:value="${community.cif}" th:text=" ${community.cif}"></option>
+                       
                         </select>
                      </div>
 

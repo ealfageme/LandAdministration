@@ -15,12 +15,12 @@ import com.example.Repositories.PropertyRepository;
 @Controller
 public class MainController {
 	
-	@Autowired
-	CommunityRepository communityRepository;
+	
 	@Autowired
 	OwnerRepository ownerRepository;
 	@Autowired
-	PropertyRepository propertyRepository;
+	CommunityRepository communityRepository;
+
 	
 	@RequestMapping(value="/", method = RequestMethod.GET)
 	public String main(Model model) {
@@ -35,17 +35,7 @@ public class MainController {
 		return "home";
 	}
 	
-	@RequestMapping(value="/community/", method = RequestMethod.GET)
-	public String communityGet(Model model) {	
-		model.addAttribute("communities", communityRepository.findAll());
-		return "community";
-	}
 	
-	@RequestMapping(value="/community/", method = RequestMethod.POST)
-	public String communityPost(Model model) {	
-		model.addAttribute("communities", communityRepository.findAll());
-		return "community";
-	}
 	
 	@RequestMapping(value="/communityPage/", method = RequestMethod.GET)
 	public String communityPage(Model model) {	
@@ -55,21 +45,7 @@ public class MainController {
 
 	
 
-	@RequestMapping(value="/property/", method = RequestMethod.GET)
-	public String propertyGet(Model model) {	
-		model.addAttribute("properties", propertyRepository.findAll());
-		return "property";
-	}
-	
-	@RequestMapping(value="/property/", method = RequestMethod.POST)
-	public String propertyPost(Model model) {	
-		return "property";
-	}
-	
-	@RequestMapping(value="/propertyPage/{id}", method = RequestMethod.GET)
-	public String propertyPage(Model model, @PathVariable long id) {
-		return "propertyPage";
-	}
+
 
 	
 	@RequestMapping("/error/")

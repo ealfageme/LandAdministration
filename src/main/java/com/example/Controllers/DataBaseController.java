@@ -28,12 +28,12 @@ public class DataBaseController implements CommandLineRunner {
 	@PostConstruct
     private void initDatabase() {
 		
-		Owner owner1 = new Owner("78945329G", "Ownername1","OwnerSurname", 695339576);
-		Owner owner2 = new Owner("12242329H", "Ownername2","OwnerSurname", 695339576);
-		Owner owner3 = new Owner("87645329S", "Ownername3","OwnerSurname", 695339576);
-		Owner owner4 = new Owner("32945329Y", "Ownername4","OwnerSurname", 695339576);
-		Owner owner5 = new Owner("23945329A", "Ownername5","OwnerSurname", 695339576);
-		Owner owner6 = new Owner("38945329B", "Ownername6","OwnerSurname", 695339576);
+		Owner owner1 = new Owner("78945329G", "John","Snow", 695339576);
+		Owner owner2 = new Owner("12242329H", "John","Wick", 695339576);
+		Owner owner3 = new Owner("87645329S", "Emmanuel","Rodrigues", 695339576);
+		Owner owner4 = new Owner("32945329Y", "Amapola","Fuertes", 695339576);
+		Owner owner5 = new Owner("23945329A", "Paola","Lola", 695339576);
+		Owner owner6 = new Owner("38945329B", "Hector","Domingues", 695339576);
 		
 		ownerRepository.save(owner1);
 		ownerRepository.save(owner2);
@@ -42,8 +42,8 @@ public class DataBaseController implements CommandLineRunner {
 		ownerRepository.save(owner5);
 		ownerRepository.save(owner6);
 		
-		Community community1 = new Community("423423-12312", "C/Tulipan", 12,28312, 30000,312324214);
-		Community community2 = new Community("645466-21346", "C/Leganes", 1,42342, 60000,423423423);
+		Community community1 = new Community("423423-12312", "C/Tulipan", 12,28312, 30000,"765432-23456");
+		Community community2 = new Community("645466-21346", "C/Leganes", 1,42342, 60000,"765432-3456");
 		
 		communityRepository.save(community1);
 		communityRepository.save(community2);

@@ -47,13 +47,10 @@ public class MainController {
 		return "community";
 	}
 	
-	@RequestMapping(value="/communityPage/", method = RequestMethod.GET)
-	public String communityPage(Model model) {	
+	@RequestMapping(value="/communityPage/{cif}", method = RequestMethod.GET)
+	public String communityPage(Model model, @PathVariable String cif) {	
 		return "communityPage";
 	}
-	
-
-	
 
 	@RequestMapping(value="/property/", method = RequestMethod.GET)
 	public String propertyGet(Model model) {	

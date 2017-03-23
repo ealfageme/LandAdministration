@@ -1,0 +1,12 @@
+.mybutton {
+	background-color: Transparent;
+	color: black;
+	border-color: #000000;
+	padding:15px;
+	font-size: 14px;
+	font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 1px;
+	
+}

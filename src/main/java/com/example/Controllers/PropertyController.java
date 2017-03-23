@@ -36,8 +36,10 @@ public class PropertyController {
 	@RequestMapping(value="/property/", method = RequestMethod.POST)
 	public String propertyPost(Model model, @RequestParam int portalnumber,@RequestParam int floor,@RequestParam char letter,
 			@RequestParam long selectowner, @RequestParam String selectcommunity) {
+		model.addAttribute("properties", propertyRepository.findAll());
+		model.addAttribute("owners", ownerRepository.findAll());
+		model.addAttribute("communities", communityRepository.findAll());
 		Property property = new Property (portalnumber, floor, letter , 0);
-		System.out.println(selectcommunity);
 		Community community =communityRepository.findByCif(selectcommunity);
 		
 		property.setCommunity(community);

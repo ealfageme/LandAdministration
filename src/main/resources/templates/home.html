@@ -16,7 +16,7 @@
 
 <!-- Theme CSS -->
 <link href="/css/clean-blog.min.css" rel="stylesheet" />
-
+<link href="/css/style.css" rel="stylesheet" />
 <!-- Custom Fonts -->
 <link href="/vendor/font-awesome/css/font-awesome.min.css"
 	rel="stylesheet" type="text/css" />
@@ -77,7 +77,7 @@
 	</header>
 
 	<!-- Main Content -->
-	<div class="container">
+	<div class="containe col-lg-offset-4">
 		<div class="row">
 			<form method="post">
 				<span>Select Community</span> <select class="form-control"
@@ -94,11 +94,10 @@
 					<option value="DNI">DNI</option>
 					<option value="wholeCommunity">Whole community</option>
 				</select> <span id="text1"></span> 
-				<input style="margin: 30px;" type="text" id="option1" name="option1"/> 
+				<input  th:required="true" style="margin: 30px;" type="text" id="option1" name="option1"/> 
 				<span id="text2" style="margin: 30px;"></span> 
-				<input style="margin: 30px;" type="text" id="option2" name="option2"/>
-				<button class="btn btn-primary"
-					style="background-color: Transparent; color: black; border-color: #000000;">Search</button>
+				<input th:required="true" style="margin: 30px;" type="text" id="option2" name="option2"/>
+				<button class=" mybutton">Search</button>
 			</form>
 		</div>
 	</div>
@@ -121,7 +120,7 @@
 								<p th:text='${property.owner.name}'></p>
 							<label>Community</label> 
 								<p th:text='${property.community.cif}'></p>
-								<button onClick="propertyRedirect();" class="btn btn-primary">Modify</button>
+								<button onClick="propertyRedirect();" class=" mybutton" >Modify</button>
 						</div>
 						<div class="col-l-2 col-md-2 col-sm-2 col-xs-12">
 							<br></br> <br></br> <br></br> <br></br> <br></br> <br></br>

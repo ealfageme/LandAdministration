@@ -83,11 +83,11 @@
                  <div class="form-group" >
                       <div class="col-l-3 col-md-3 col-sm-3 col-xs-12 col-md-offset-2">
                           <label>Portal number</label>
-                          <input  name ='portalnumber'/>
+                          <input th:required="true"  name ='portalnumber'/>
                           <label>Floor</label>
-                          <input name ='floor'/>
+                          <input th:required="true" name ='floor'/>
                           <label>Letter</label>
-                          <input name ='letter'/>
+                          <input th:required="true" name ='letter'/>
                      </div>
                       <div class="col-l-3 col-md-3 col-sm-3 col-xs-12" >
                           <label>Owner</label>
@@ -104,7 +104,7 @@
 
 
                      <div class="col-l-2 col-md-2 col-sm-2 col-xs-12 col-md-offset-1" >      
-                          <button type="submit" class="btn btn-primary" style="margin-top:10px;background-color: Transparent;color:black;border-color: #000000;">Add property</button>
+                          <button type="submit" class="mybutton">Add property</button>
                      </div>
                  </div>
 
@@ -118,12 +118,12 @@
         <h2>Properties</h2>
         <div class="col-l-12 col-md-12 col-sm-12 col-xs-12 ">
         	<div class="col-l-5 col-md-5 col-sm-5 col-xs-12 col-md-offset-2" style="margin-top:20px;">
-            <select  class="form-control" id="SelectProperty" style="border-radius: 0px !important; -webkit-appearance: none;">
+            <select  class="form-control" id="SelectProperty" >
                 <option th:each="property: ${properties}" th:value="${property.id}" th:attr="number=${property.number}, letter=${property.letter}, floor=${property.floor}" th:text="|Number: ${property.number}, Letter: ${property.letter}, Floor: ${property.floor} |"></option>
              </select>
              </div>
              <div class="col-l-3 col-md-3 col-sm-3 col-xs-12 col-md-offset-2" style="margin-top:10px;">
-              <button onClick="property();" class="btn btn-primary" style="background-color: Transparent;color:black;border-color: #000000;">Modify property</button>
+              <button onClick="property();" class="mybutton" >Modify property</button>
              </div>
          </div>
     </div>

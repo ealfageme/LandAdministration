@@ -16,7 +16,7 @@
 
     <!-- Theme CSS -->
     <link href="/css/clean-blog.min.css" rel="stylesheet"/>
-
+	<link href="/css/style.css" rel="stylesheet" />
     <!-- Custom Fonts -->
     <link href="/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
     <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'/>
@@ -83,19 +83,19 @@
                  <div class="form-group" >
                       <div class="col-l-3 col-md-3 col-sm-3 col-xs-12" >
                           <label>CIF</label>
-                          <input name ='cif'/>
+                          <input th:required="true" name ='cif'/>
                           <label>Street</label>
-                          <input name ='street'/>
+                          <input th:required="true" name ='street'/>
                           <label>Number</label>
-                          <input name ='numbercommunity'/>
+                          <input th:required="true" name ='numbercommunity'/>
                      </div>
                       <div class="col-l-3 col-md-3 col-sm-3 col-xs-12 col-md-offset-1" >
                           <label>Postal Code</label>
-                          <input name ='postalcode'/>
+                          <input  th:required="true" name ='postalcode'/>
                           <label>Population</label>
-                          <input name ='population'/>
+                          <input th:required="true" name ='population'/>
                           <label>Bank account</label>
-                          <input name ='bankaccountco'/>
+                          <input th:required="true" name ='bankaccountco'/>
 
                      </div>
 
@@ -107,7 +107,7 @@
                             <br></br>
                             <br></br>
                             <br></br>
-                            <button type="submit" class="btn btn-primary" style="background-color: Transparent;color:black;border-color: #000000;margin:30px;">Add community</button>
+                            <button type="submit" class=" mybutton">Add community</button>
                      </div>
                  </div>
 
@@ -124,7 +124,7 @@
              </select></div>
              <br></br>
              <div class="col-l-7 col-md-7 col-sm-7 col-xs-7 col-md-offset-5" >
-              <button onClick="community();" class="btn btn-primary">Modify community</button>
+              <button onClick="community();" class=" mybutton">Modify community</button>
              </div>
          </div>
 
